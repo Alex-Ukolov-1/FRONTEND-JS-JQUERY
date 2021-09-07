@@ -1,0 +1,15 @@
+<script>
+   function requestType(name,handler)
+   {
+   	defineRequestType(name,(nest,content,source,callback)=>
+    {
+    	try{Promise.resolve(handler(nest,content,source)).then(responce=>callback(null,response),failure=>callback(failure));}
+    	catch(exception)
+    	{
+    		callback(exception);
+    	}
+    });
+   }
+
+   document.write(requestType("alex",1));
+</script>

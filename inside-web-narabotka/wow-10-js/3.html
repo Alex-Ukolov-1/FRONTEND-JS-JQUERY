@@ -1,0 +1,10 @@
+<button>одноразовая кнопка</button>
+<script type="text/javascript">
+  let button=document.querySelector("button");
+  function once()
+  {
+  	document.write("ready!");
+  	button.removeEventListener("click",once);
+  }
+button.addEventListener("click",once);
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="my-list">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+	</ul>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+   <script type="text/javascript">
+       document.getElementById('my-list').addEventListener('mouseover',function(event){
+       	if(event.target.nodeName==='LI')
+       	{
+       		console.log('element'+(Array.prototype.indexOf.call(document.getElementById('my-list').children,event.target)+1));
+       	}},false);
+       		
+       			
+   </script>
+</body>
+</html>

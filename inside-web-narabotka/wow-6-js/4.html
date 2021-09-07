@@ -1,0 +1,40 @@
+<script type="text/javascript">
+	let okIterator="OK"[Symbol.iterator]();
+	document.write(okIterator);
+	document.write(okIterator.next());
+	document.write(okIterator.next());
+
+	class Matrix
+	{
+		constructor(width,height,element=(x,y)=>undefined)
+		{
+			this.width=width;
+			this.height=height;
+			this.content=[];
+
+			for (let y=0;y<height;y++) 
+			{
+				for (var x = 0; x < width; x++) 
+				{
+					this.content[y*width+x]=element(x,y);
+				}
+			}
+		}
+	}
+	get(x,y)
+	{
+		return this.content[y*this.width+x];
+	}
+
+	set(x,y)
+	{
+		this.content[y*this.width+x]=value;
+	}
+
+
+	let matrix=new Matrix(2,2(x,y)=>`значение ${x},${y}`)
+	for (let(x,y,value) of Matrix) 
+	{
+		document.write(x,y,value);
+	}
+</script>

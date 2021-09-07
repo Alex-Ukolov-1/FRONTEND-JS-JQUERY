@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>model of events</title>
+</head>
+<body>
+	<img id="example" src="1.jpg" alt="slash of queen" onclick="console.log('B '+ formatDate(new Date())+'babax');"/>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+   <script type="text/javascript">
+       function formatDate(date)
+       {
+          return(date.getHours()<10? '0':'')+date.getHours()+':'+(date.getMinutes()<10?'0':'')+date.getMinutes()+':'+(date.getSeconds()<10?'0':'')+date.getSeconds();       	
+       }
+       document.getElementById('example').onmouseover=function(event)
+       {
+       	console.log('B '+ formatDate(new Date())+'tararax!');
+       };
+   </script>
+</body>
+</html>

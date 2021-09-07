@@ -1,0 +1,24 @@
+<script type="text/javascript">
+    class Rabbit
+	{
+		constructor(type)
+		{
+			this.type=type;
+		}
+
+		speak(line)
+		{
+			document.write(`${this.type} кролик говорит:'${line}'`);
+		}
+	}
+	let killerRabbit=new Rabbit("убийственный");
+	let blackRabbit=new Rabbit("черный");
+
+
+	Rabbit.prototype.toString=function()
+	{
+		return `${this.type} rabbit`;
+	};
+
+	document.write(String(blackRabbit));
+</script>

@@ -1,0 +1,8 @@
+<script>
+	function storage(nest,name)
+	{
+		return new Promise(resolve=>{nest.readStorage(name,result=>resolve(result));});
+	}
+	document.write(storage(bigOak,"enemies").then(value=>document.write("wow",value)));
+
+</script>

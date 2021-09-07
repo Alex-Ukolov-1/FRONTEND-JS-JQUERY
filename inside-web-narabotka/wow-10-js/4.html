@@ -1,0 +1,12 @@
+<p>abzac c<button>knopka</button></p>
+<script type="text/javascript">
+	let para=document.querySelector("p");
+	let button=document.querySelector("button");
+	para.addEventListener("mousedown",()=>
+    {document.write("обработчик событий");});
+    button.addEventListener("mousedown",event=>
+     {
+     document.write("обработчик для кнопки");
+     if(event.button==2)event.stopPropagation();
+     });
+</script>

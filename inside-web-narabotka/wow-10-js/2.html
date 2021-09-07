@@ -1,0 +1,9 @@
+<button type="button" onclick="down()">Щёлкни здесь</button>
+<p>Здесь нет обработчика.</p>
+<script type="text/javascript">
+	function down()
+	{
+	let button=document.querySelector("button");
+    button.addEventListener("click",()=>{document.write("<p>кнопка нажата.");});
+    }
+</script>

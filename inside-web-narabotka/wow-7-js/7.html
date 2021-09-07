@@ -1,0 +1,33 @@
+<script>
+
+   function promtDirection(question)
+   {
+   	let result=prompt(question);
+   	if(result.toLowerCase()=="left")return "L";
+   	if(result.toLowerCase()=="right")return "P";
+   	throw new Error("not right way:" + result);
+   }
+
+   function look()
+   {
+   	if(promtDirection("why are you")=="L")
+   	{
+   		return "House";
+   	}
+   	else
+   	{
+   		return "2 angry bears";
+   	}
+   }
+
+   try
+   {
+   	document.write("in front of you",look());
+   }
+   catch(error)
+   {
+    document.write("that "+error);
+   }
+   document.write(look());
+
+</script>

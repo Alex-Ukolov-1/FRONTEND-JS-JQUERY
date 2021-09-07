@@ -1,0 +1,25 @@
+<script>
+
+   const mailRoute=["1","2","3","4","5","6","7","8","9","10","11"];
+
+   function findRoute(graph,from,to)
+   {
+    let work=[{at:from,route:[]}];
+     for (let i=0;i<work.length;i++) 
+     {
+    	let{at,route}=work[i];
+
+    	for (let place of graph[at]) 
+    	{
+    		if(place==to)return route.concat(place);
+    		if(!work.some(w=>w.at==place))
+    		{
+    			work.push({at:place,route:route.concat(place)});
+    		}
+    	}
+     }
+   }
+   findRoute(mailRoute,4,5);
+   document.write(findRoute(mailRoute,1,5));
+
+</script>

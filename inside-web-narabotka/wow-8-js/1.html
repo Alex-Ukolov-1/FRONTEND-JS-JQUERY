@@ -1,0 +1,10 @@
+<script>
+	const weekDay=fucntion()
+	{
+		const names=["понедельник","вторник","среда","четверг","пятница","суббота","воскресенье"];
+		return{name(number){return names[number];},number(name){return names.indexOf(name);}};
+	}
+	();
+	document.write(weekDay.name(weekDay.number("воскресенье")));
+
+</script>

@@ -1,0 +1,18 @@
+<script>
+   function runROBOT(state,robot,memory)
+   {
+   	for (let turn=0;;turn++) 
+   	{
+   		if(state.parcels.length==0)
+   		{
+   			document.write(`выполнено за ${turn} ходов`);
+   			break;
+   		}
+   	}
+   	let action=robot(state,memory);
+   	state=state.move(action.direction);
+   	memory=action.memory;
+   	document.write(`went to array ${action.direction}`);
+   }
+   runROBOT(20,3,20)
+</script>
